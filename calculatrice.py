@@ -1,4 +1,4 @@
-'''
+
 def addition():
     while True:
         try:
@@ -66,7 +66,7 @@ def multiplication():
         if response.lower() == 'no':
             break
 multiplication()
-'''
+
 def division():
     while True:
         try:
