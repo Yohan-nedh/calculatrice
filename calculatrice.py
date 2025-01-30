@@ -18,7 +18,6 @@ def addition():
         response = input("Do you want to continue? [Yes/No]: ")
         if response.lower() == 'no':
             break
-addition()
 
 def subtraction():
     while True:
@@ -40,16 +39,14 @@ def subtraction():
         response = input("do you want to continue? [Yes/No]: ")
         if response.lower() == 'no':
             break
-subtraction()
 
 def multiplication():
     while True:
         try:
             mul = input("Please input your multiplication:")
+            #cette ligne vérifie si il y'a une lettre et renvoie
             if any(a.isalpha() for a in mul):
                 raise ValueError
-            if '-' in mul:
-                raise ("⚠️ Attention, c'est une multiplication ici ! Utilisez '*' au lieu de '-'.")
             if mul == '=':
                 break
             if '*' in mul:
@@ -64,12 +61,13 @@ def multiplication():
         response = input("do you want to continue? [Yes/No]: ")
         if response.lower() == 'no':
             break
-multiplication()
 
 def division():
     while True:
         try:
             div = input("Please input your division:")
+            #cette ligne vérifie si il y'a une lettre et renvoie
+            #a.isalpha c'est pour la vérification de lettre
             if any(a.isalpha() for a in div):
                 raise ValueError
             if div == '=':
@@ -85,6 +83,20 @@ def division():
         reponse = input("do you want to continue? [Yes/No]: ")
         if reponse.lower() == 'no':
             break
-division()
-
-print("voicie ma calculatrice merci")
+#division()
+#ce code permet de tout faire que ce soit +,-,/,*
+def calcul():
+    while True:
+        try:
+            calc = input("Please input your calculation:")
+            if any(a.isalpha() for a in calc):
+                raise ValueError
+            if calc == '=':
+                break
+            operation = eval(calc)
+            print(f"resultat:{operation}")
+        except ValueError:
+            print("You made a mistake or mistakes. Check what you entered.")
+        response = input("do you want to continue? [Yes/No]: ")
+        if response.lower() == 'no':
+                break
