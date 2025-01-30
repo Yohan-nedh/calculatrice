@@ -10,6 +10,7 @@ def addition():
                 num = add.split('+')
                 total = 0
                 for i in num:
+                    #ici on va transformer la chain de caractére en float
                     total += float(i.strip())
                 print(f"resultat:{total}")
         except ValueError:
@@ -28,6 +29,7 @@ def subtraction():
             if sub == '=':
                 break
             if '-' in sub:
+                #split c'est pour éliminer les espaces
                 num = sub.split('-')
                 totalsub = float(num[0].strip())
                 for i in num[1:]:
