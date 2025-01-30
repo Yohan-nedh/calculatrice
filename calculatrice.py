@@ -1,4 +1,3 @@
-
 def addition():
     while True:
         try:
@@ -87,3 +86,5 @@ def division():
         if reponse.lower() == 'no':
             break
 division()
+
+print("voicie ma calculatrice merci")
